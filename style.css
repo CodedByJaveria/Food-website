@@ -7,7 +7,7 @@
 
 body {
   background-color:white;
-  color: #333;
+    color: #111111;
 }
 
 
@@ -70,12 +70,24 @@ body {
   color:#333;
   border-bottom: 2px solid #ff5722;
 }
-
+.dark-toggle {
+      cursor: pointer;
+      padding: 8px 14px;
+      border: none;
+      background: #ff5722;
+      color: #fff;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    .dark-toggle:hover {
+      background: #9f2a06;
+    }
 
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 0 0;
   flex-wrap: wrap;
   gap: 20px;
@@ -166,25 +178,26 @@ h1 span {
     transform: scale(1);
   }
 }
+
 .popular{
-  padding: 30px 20px;
+  padding: 20px 15px;
   /* text-align: center; */
 }
 .card-container
 {
   justify-content: space-evenly;
   display: flex;
-  gap: 30px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 .cards{
   border-radius: 7px;
   padding: 20px;
-  width: 260px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1)
-
+  width: 280px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
-h2{
+
+.popular h2{
   text-align: center;
   justify-content: center;
   color: #9f2a06;
@@ -195,13 +208,17 @@ h2{
 }
 .cards img{
   width: 100%;
-  height: 300px;
+  height: 230px;
 object-fit: cover;
+transition: transform 0.3;
+}
+.cards:hover img {
+  transform: scale(1.05);
 }
 .cards h3{
   color: #ff5722;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
   align-items: center;
   margin-left: 40px;
 }
@@ -238,6 +255,54 @@ object-fit: cover;
 .cards button:hover{
   background-color: crimson;
 }
+.newsletter {
+  background: #ff6600; /* Orange BG */
+  color: #fff;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.newsletter h2 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.newsletter p {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+
+.newsletter form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.newsletter input {
+  padding: 12px 15px;
+  border: none;
+  border-radius: 5px;
+  width: 250px;
+}
+
+.newsletter button {
+  background: #fff;
+  color: #ff6600;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.newsletter button:hover {
+  background: #222;
+  color: #fff;
+}
+
+
 .contact {
   background-color: #fff7f1;
   padding: 20px 20px;
@@ -254,46 +319,73 @@ object-fit: cover;
 
 .contact p {
   font-size: 18px;
-  color: #555;
+  color: black;
 }
 
 .contact strong {
-  color: #ff6600;
-  font-weight: bold;
+  color:#ff6600 ;
+  font-weight:bold;
 }
+
+/* footer */
 footer {
   background: #fcfafa;
-  padding: 40px 0 20px;
-  text-align: center;
+  padding: 50px 20px 20px;
   color: #333;
 }
-.footer-content h3 {
-  margin-bottom: 10px;
-  font-size: 24px;
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 30px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.footer-section {
+  max-width: 300px;
+}
+
+.footer-section h3 {
+  color: #ff6600;
+  margin-bottom: 18px;
+  font-size: 20px;
+}
+
+.footer-section p {
+  font-size: 15px;
+  color:black;
+  margin: 6px 0;
+}
+
+.footer-section i {
+  margin-right: 8px;
   color: #ff6600;
 }
-.footer-content p {
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-.socials a {
-  margin-top: 20px;
-  text-decoration: none;
-  font-size: 18px;
-   color:  #ff6600;
-   gap: 15px;
-}
-.footer-bottom {
-  margin-top: 20px;
-  font-size: 13px;
-color:#777;
 
+.socials a {
+  margin-right: 12px;
+  font-size: 18px;
+  color: #ff6600;
+  transition: 0.3s;
 }
-strong{
+
+.socials a:hover {
   color: #9f2a06;
-  font-weight: bold;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 16px;
+  color:black;
+  margin-top: 20px;
+}
+.footer-bottom strong{
+  color: #ed3b13;
   font-size: 18px;
 }
+
 /* Mobile Responsive Design */
 @media (max-width: 768px) {
 
@@ -359,6 +451,7 @@ strong{
     height: auto;
   }
 
+
   /* Contact & Footer */
   .contact h6 {
     font-size: 20px;
@@ -376,3 +469,121 @@ strong{
     font-size: 13px;
   }
 }
+  /* 🌙 Dark Mode */
+body.dark-mode {
+   background: #121212; 
+  color: #f5f5f5;
+}
+
+/* Navbar */
+body.dark-mode .navbar-container {
+  background: #121212 ;
+}
+
+body.dark-mode .logo {
+  color: #ff784e;
+}
+
+body.dark-mode .logo span {
+  color: #f5f5f5;
+}
+
+body.dark-mode .nav-links a {
+  color: #ff784e;
+}
+body.dark-mode .nav-links a:hover {
+  color: #fff;
+  border-bottom: 2px solid #ff784e;
+}
+
+/* Hero Section */
+body.dark-mode .container-text h1 {
+  color: #ff5722;
+}
+body.dark-mode .container-text h1 span {
+  color: #f5f5f5;
+}
+body.dark-mode .container-text p {
+  color: #d3d3d3;
+}
+
+/* Buttons */
+body.dark-mode .btn,
+body.dark-mode .cards button {
+  background: #ff5722;
+  color: #fff;
+}
+body.dark-mode .btn:hover,
+body.dark-mode .cards button:hover {
+  background: #782614;
+}
+
+/* Cards */
+body.dark-mode .cards {
+  background: #1e1e1e;
+  color: #f5f5f5;
+  box-shadow: 0 4px 10px rgba(255, 120, 78, 0.2);
+}
+body.dark-mode .cards p{
+  color: white;
+}
+
+body.dark-mode .cards h3 {
+  color: #ff5722;
+}
+
+body.dark-mode .cards h5 {
+  color: #ff5722;
+}
+
+/* Newsletter */
+body.dark-mode .newsletter {
+  background: #222;
+  color: #fff;
+}
+body.dark-mode .newsletter input {
+  background: #333;
+  color: #fff;
+}
+body.dark-mode .newsletter button {
+  background: #ff5722;
+  color: #fff;
+}
+body.dark-mode .newsletter button:hover {
+  background: #502012;
+}
+
+/* Contact */
+body.dark-mode .contact {
+  background: #1a1a1a;
+  color: #f5f5f5;
+}
+body.dark-mode .contact strong {
+  color: #ff5722;
+}
+
+/* Footer */
+body.dark-mode footer {
+  background: #1e1e1e;
+  color: #f5f5f5;
+}
+body.dark-mode footer {
+  border-top: 2px solid #ff5722;
+}
+
+body.dark-mode .footer-content h3 {
+  color:#ff5722;
+}
+body.dark-mode .footer-bottom {
+  color:white;
+}
+body.dark-mode .socials a {
+  color: #ff5722;
+}
+body.dark-mode .footer-section p{
+  color:white;
+}
+body.dark-mode .contact p{
+ color: white;
+}
+

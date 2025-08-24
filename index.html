@@ -18,6 +18,8 @@
         <li><a href="#">Menu</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
+         <li><button class="dark-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button></li>
+
       </ul>
     </div>
     
@@ -30,19 +32,19 @@
       <a href="#" class="btn">Explore Menu</a>
     </div>
     <div class="image">
-      <img src="images/food.image.jpg" alt="Food Image">
+      <img src="images/food.image.png" alt="Food Image">
     </div>
   </section>
   <section class="popular">
-     <h2>DEAL OFFERS</h2>
+     <h2>FAST FOOD</h2>
     <div class="card-container">
     <div class="cards">
-      <img src="images/zinger burger.webp" alt="Burger" >
+      <img src="images/burger.png" alt="Burger" >
       <h3>Zinger Burger</h3>
       <p>Spicy,Crispy & Delicious</p>
       <h5>Only in RS 350</h5>
-      <button onclick="orderNow()">Order Now</button>
-    </div>
+       <button onclick="orderNow()">Order Now</button>
+     </div>
        <div class="cards">
         <img src="images/image.png" alt="Shawarma" >
         <h3>Zinger Shawrma</h3>
@@ -67,24 +69,158 @@
     </div>
     </div>
   </section>
-  <section class="contact">
+<!-- Desserts Section -->
+<section class="popular">
+  <h2>DESSERTS</h2>
+  <div class="card-container">
+    <div class="cards">
+      <img src="images/vanilla-icecream.png" alt="Ice Cream">
+      <h3>Vanilla Ice Cream</h3>
+      <p>Creamy & Sweet</p>
+      <h5>Only in RS 200</h5>
+      <button onclick="orderNow()">Order Now</button>
+    </div>
+    <div class="cards">
+      <img src="images/chocolate-cake.png" alt="Chocolate Cake">
+      <h3>Chocolate Cake</h3>
+      <p>Rich & Moist</p>
+      <h5>Only in RS 450</h5>
+      <button onclick="orderNow()">Order Now</button>
+    </div>
+    <div class="cards">
+      <img src="images/chocolate-ice-cream.png" alt="Chocolate Ice Cream">
+      <h3>Chocolate Ice Cream</h3>
+      <p>Cold & Delicious</p>
+      <h5>Only in RS 300</h5>
+      <button onclick="orderNow()">Order Now</button>
+    </div>
+    <div class="cards">
+      <img src="images/strawberry-chocolate-brownies-.png" alt="stawberry Brownie">
+      <h3>Stawberry Browniee</h3>
+      <p>Fruity & Chocolaty</p>
+      <h5>Only in RS 400</h5>
+      <button onclick="orderNow()">Order Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- Drinks Section -->
+<section class="popular">
+  <h2>DRINKS</h2>
+  <div class="card-container">
+    <div class="cards">
+      <img src="images/soft-drink.png" alt="Cold Drinks">
+      <h3>Cold Drink</h3>
+      <p>Refreshing & Chilled</p>
+      <h5>Only in RS 100</h5>
+      <button onclick="orderNow()">Order Now</button>
+    </div>
+    <div class="cards">
+      <img src="images/stawberry-shake.png" alt=" Milk sake">
+      <h3>Strawberry Shake</h3>
+      <p>Fresh & Delicious</p>
+      <h5>Only in RS 250</h5>
+      <button onclick="orderNow()">Order Now</button>
+    </div>
+     <div class="cards">
+      <img src="images/fruit-juice.png" alt="Fruit juice">
+      <h3>Fruit Juice</h3>
+      <p>Fresh & Fruity</p>
+      <h5>Only in Rs 150</h5>
+      <button onclick="orderNow()">Order Now</button>
+    </div>
+     <div class="cards">
+      <img src="images/mango-shake.png"  alt="Mango shake">
+      <h3>Mango Juice</h3>
+      <p> Cold & Fresh </p>
+      <h5>Only in Rs 150</h5>
+      <button onclick="orderNow()">Order Now</button>
+    </div>
+    
+    
+  </div>
+</section>
+
+<!-- Pakistani Food Section -->
+<section class="popular">
+  <h2>DAILY DELIGHTS</h2>
+  <div class="card-container">
+    <div class="cards">
+      <img src="images/biryani.png" alt="biryani">
+      <h3>Chicken Biryani</h3>
+      <p>Spicy & Aromatic</p>
+      <h5>One plate in RS 350</h5>
+      <button onclick="orderNow()">Order Now</button>
+    </div>
+    <div class="cards">
+      <img src="images/karahi.png" alt="Karahi">
+      <h3>Chicken Karahi</h3>
+      <p>Masala & Fresh</p>
+      <h5>Only in RS 800</h5>
+      <button onclick="orderNow()">Order Now</button>
+    </div>
+     <div class="cards">
+      <img src="images/palao.png" alt="Palao">
+      <h3>Palao</h3>
+      <p>Tasty & Spicy</p>
+      <h5>One plate in RS 250</h5>
+      <button onclick="orderNow()">Order Now</button>
+    </div>
+     <div class="cards">
+      <img src="images/shami-kbab.png" alt="shami kbab">
+      <h3>Shami Kbab</h3>
+      <p>Hot & Spicy</p>
+      <h5>One piece in RS 30</h5>
+      <button onclick="orderNow()">Order Now</button>
+    </div>
+  </div>
+</section>
+
+<section class="newsletter">
+  <h2>Stay Connected</h2>
+  <p>Get exclusive deals, discounts & latest updates directly in your inbox.</p>
+  <form>
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+  <footer>
+  <div class="footer-container">
+    <!-- About -->
+    <div class="footer-section">
+      <h3>About Us</h3>
+      <p>FoodCorner delivers hot, fresh and delicious meals at your doorstep. Taste happiness in every bite!</p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section">
+      <h3>Contact</h3>
+      <p><i class="fas fa-envelope"></i> foodCorner@gmail.com</p>
+      <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+      <p><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</p>
+    </div>
+
+    <!-- Socials -->
+    <div class="footer-section">
+      <h3>Follow Us</h3>
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+  </div>
+ <section class="contact">
   <h6>Have any questions?</h6>
   <p>Contact us at: <strong>foodCorner@gmail.com</strong></p>
 </section>
-  <footer>
-  <div class="footer-content">
-    <h3>FoodCorner</h3>
-    <p>Delivering hot and fresh meals right to your doorstep.</p>
-    <div class="socials">
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-    </div>
-  </div>
   <div class="footer-bottom">
-    <p>&copy; 2025 FoodCorner | Designed by <strong>Javeria Tariq.</strong>.</p>
+    <p>&copy; 2025 FoodCorner | Designed by <strong>Javeria Tariq</strong></p>
   </div>
 </footer>
+
+<!-- </footer> -->
 <script src="script.js"></script>
 </body>
 </html>
